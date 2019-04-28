@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Downloading ShoppingList Updates</title>
+  </head>
+  <body>
+    <progress style="width:100%;" value="0" max="100">0%</progress>
+  </body>
+  <script>
+    $ = require('jquery')
+    const {IPCRenederer} =require('electron');
+    //request progress every second
+    setInterval(()=>{
+    let progress = IPCRenederer.sendSync('download-progress-request')
+    $('progress').val(progress)
+    }, 1000)
+  </script>
+</html>
