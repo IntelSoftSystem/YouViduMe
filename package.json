@@ -1,6 +1,6 @@
 {
   "name": "y-v-m",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Electron application for YouViduMe",
   "main": "./build/main.js",
   "repository": {

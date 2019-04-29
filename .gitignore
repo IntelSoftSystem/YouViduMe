@@ -18,4 +18,17 @@ npm-debug.log
 
 build/
 dist/
+private/
+resources/
+app/
+.travis.yml
+main.js
+appveyor.yml
+LICENSE
 
+package-lock.json
+process.html
+updater.js
+webpack.main.js
+webpack.renderer.js
+yarn.lock
