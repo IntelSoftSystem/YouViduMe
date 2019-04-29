@@ -21,7 +21,7 @@
     "mac": "electron-builder -m",
     "win": "electron-builder -w",
     "make-cert": "electron-builder create-self-signed-cert -p IntelSoft",
-    "publish": "GH_TOKEN='0eb05fd9ddc136dd691ae4f38c675479d9cdd441' electron-builder build -m  --publish always onTagOrDraft"
+    "publish": "GH_TOKEN='0f169c1f564b73d07a111fa849d4916207411272' electron-builder build -m  --publish always onTagOrDraft"
   },
   "build": {
     "appId": "com.electron.y-v-m",

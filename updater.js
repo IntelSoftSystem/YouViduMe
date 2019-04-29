@@ -10,18 +10,18 @@ autoUpdater.autoDownload = false;
 
 exports.check = () => {
     console.log('Checking for updates');
-    
-    
+
+
     //autoUpdater.allowDowngrade = false;
     autoUpdater.setFeedURL({
         provider: "github",
         owner: "IntelSoftSystem",
         repo: "ElectronApp",
-        token: "0eb05fd9ddc136dd691ae4f38c675479d9cdd441"
+        token: "00f169c1f564b73d07a111fa849d4916207411272"
     })
     autoUpdater.checkForUpdates();
    autoUpdater.on('update-available', () => {
-       //prompt to ask user for updates 
+       //prompt to ask user for updates
       let downloadProgress = 0;
       const options = dialog.showMessageBox( null, {
         type: 'info',
@@ -56,9 +56,9 @@ exports.check = () => {
 
           })
           autoUpdater.on('update-downloaded', () => {
-              // if progressWin is 0 will close it 
+              // if progressWin is 0 will close it
               if(progressWin) progressWin.close();
-              // prompt to ask user to quit app and install updates 
+              // prompt to ask user to quit app and install updates
               dialog.showMessageBox( null, {
                 type: 'info',
                 question: 'info',
