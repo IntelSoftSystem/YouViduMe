@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Downloading YouViduMe Updates</title>
+    <style>
+      progress {
+          color: darkgreen;
+          font-size: .6em;
+          line-height: 1.5em;
+          text-indent: .5em;
+          width: 15em;
+          height: 1.8em;
+          border: 1px solid darkgreen;
+          background: #fff;
+        }
+    </style>
+  </head>
+  <body>
+    <progress style="width:100%;color: darkgreen" value="0" max="100">0%</progress>
+  </body>
+  <script>
+    $ = require('jquery')
+    const {ipcRenderer} =require('electron');
+    //request progress every second
+    setInterval(()=>{
+    let progress = ipcRenderer.sendSync('download-progress-request')
+    $('progress').val(progress)
+    }, 1000)
+  </script>
+</html>
